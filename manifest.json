@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "No Localhost",
+    "description": "Idenitify and stop access to localhost.",
+    "version": "1.0",
+    "permissions": [
+        "webRequestBlocking",
+        "webRequest",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    }
+}
