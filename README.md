@@ -11,7 +11,7 @@ In light of the recently announced [Zoom vulnerabilities](https://medium.com/@jo
 
 ### Other Mitigations
 
-Disable video on the zoom client and remove the ZoomOpener process. This is arguably the best defense againt the Zoom client attack specifically:
+Disable video on the Zoom client and remove the ZoomOpener process. This is arguably the best defense againt the Zoom client attack specifically:
 
 ```console
 $ defaults write ~/Library/Preferences/us.zoom.config.plist ZDisableVideo 1
@@ -20,7 +20,7 @@ $ rm -rf ~/.zoomus
 $ touch ~/.zoomus
 ```
 
-Block access to the localhost port using `pfctl`:
+Block access to the Zoom local server port using `pfctl`:
 
 ```console
 $ echo "block drop quick on lo0 proto tcp from any to any port = 19421" | sudo pfctl -e -f -
